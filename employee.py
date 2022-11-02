@@ -28,6 +28,12 @@ while True:
         print("view employee")
     if(choice==2):
         print("view employee")
+        print("view employee")
+        sql='SELECT * FROM `employees`' 
+        mycursor.execute(sql)
+        result=mycursor.fetchall()
+        for i in result:
+            print(i)
     elif(choice==3):
         print('search a employee')
     elif(choice==4):
