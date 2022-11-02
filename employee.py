@@ -43,6 +43,18 @@ while True:
         print(result)
     elif(choice==4):
         print('update the employee')
+        empcode=input('enter empcode:')
+        empname=input("enter empname to be updated:")
+        designation=input('enter designation to be updated:')
+        salary=input("enter salary to be updated:")
+        companyname=input("enter companyname to be updated:")
+        phoneno=input("enter phoneno to be updated:")
+        emailid=input("enter emailid to be updated:")
+        password=input("enter password to be updated:")
+        sql="UPDATE `employees` SET `empname`='"+empname+"',`designation`='"+designation+"',`salary`='"+salary+"',`companyname`='"+companyname+"',`phoneno`='"+phoneno+"',`emailid`='"+emailid+"',`password`='"+password+"' WHERE `empcode`= "+empcode
+        mycursor.execute(sql)
+        mydb.commit()
+        print("data successfully updated")
     elif(choice==5):
         print('delete the employee')
     elif(choice==6):
